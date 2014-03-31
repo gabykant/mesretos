@@ -1,88 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to MesRestos.net</title>
-
-	<style type="text/css">
-
-	::selection{ background-color: #E13300; color: white; }
-	::moz-selection{ background-color: #E13300; color: white; }
-	::webkit-selection{ background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body{
-		margin: 0 15px 0 15px;
-	}
-	
-	p.footer{
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-	
-	#container{
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		-webkit-box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Recherchez, commandez, et mangez</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.1">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <!-- Stylesheets -->
+        <link href="<?php echo base_url(); ?>cjfksoft/css/bootstrap.css" rel="stylesheet">
+        <!-- Include custom design -->
+        <link href="<?php echo base_url(); ?>cjfksoft/css/ksoft.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>cjfksoft/images/favicon.png">
+    </head>
 <body>
-
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
-</div>
-
+    <!-- Include the header, the menu bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav header-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="" class="navbar-brand">Logo here</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">     
+            <!-- Links -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="glyphicon glyphicon-user"></i> Ouvrir un compte</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-log-in"></i> Se connecter <span class="caret"></span></a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-phone"></i> Call center ( 227 63 631 )</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <div class="col-xs-12 box">
+                <div class="col-xs-9">
+                    <div class="box-search alert alert-warning">
+                        <div class="slogan">Recherchez, Commandez et mangez</div>
+                        <div>
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <select class="form-control  col-xs-3">
+                                        <option value="">Ville</option>
+                                        <option value="douala">Douala</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Quartier</option>
+                                        <option value="akwa">Akwa</option>
+                                        <option value="bali">Bali</option>
+                                        <option value="bonanjo">Bonanjo</option>
+                                        <option value="bonpriso">Bonapriso</option>
+                                        <option value="deido">Deido</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Quand ? Aujourd'hui" id='quand'>
+                                </div>
+                                <div class='form-group'>
+                                    <input type='Submit' class='form-control btn btn-warning' value='Commandez'>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class='process'>
+                        <div class='col-xs-3 box-process'>Choisir votre menu</div>
+                        <div class='col-xs-3 box-process'>Commander</div>
+                        <div class='col-xs-3 box-process'>Faites vous livrer</div>
+                        <div class='col-xs-3 box-process'>Payez</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div>
+                        <img src="<?php echo base_url() ?>cjfksoft/images/banner-carre.gif" class="img-responsive" align="bottom" height="250">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <footer>
+            <div class="container-fluid">
+                Copyright &COPY; 2014 MesRestos.Net
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
