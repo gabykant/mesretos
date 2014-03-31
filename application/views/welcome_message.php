@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to MesRestos</title>
+	<title>Welcome to MesRestos.net</title>
 
 	<style type="text/css">
 
