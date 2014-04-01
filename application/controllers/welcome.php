@@ -5,6 +5,7 @@ class Welcome extends CI_Controller {
 	function __construct() {
             parent::__construct();
             $this->load->model('cities_model');
+            $this->load->model('towns_model');
         }
         
 	public function index()
@@ -22,6 +23,23 @@ class Welcome extends CI_Controller {
             $data['options'] = $options;
             $this->load->view('welcome_message', $data);
 	}
+        
+        public function register() {
+            $this->load->view("public/account");
+        }
+        
+        public function login() {
+            $this->load->view("public/login");
+        }
+        
+        public function gettowncities() {
+            $townlist = $this->towns_model->getAllTowns($_POST['id']);
+            $townarray = array();
+            foreach ($townlist as $key => $value) {
+                $townarray[$value['id']] = $value['name'];
+            }
+            echo json_encode($townarray);
+        }
 }
 
 /* End of file welcome.php */

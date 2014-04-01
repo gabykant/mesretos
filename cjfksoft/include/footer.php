@@ -1,8 +1,9 @@
-</div> <!-- End mainContent -->
-</div> <!-- -->
+</div> <!-- End content -->
+</div> <!-- End container -->
+
 <footer>
     <div class="container-fluid">
-        Copyright &COPY; 2014 nGiiro.com
+        Copyright &COPY; 2014 MesRestos.Net
     </div>
 </footer>
 
