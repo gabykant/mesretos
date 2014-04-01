@@ -16,6 +16,7 @@
         
         <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo base_url(); ?>cjfksoft/images/favicon.png">
+        
     </head>
 <body>
     <!-- Include the header, the menu bar -->
@@ -50,10 +51,13 @@
                         <div>
                             <form class="form-inline" role="form">
                                 <div class="form-group">
-                                    <select class="form-control  col-xs-3">
-                                        <option value="">Ville</option>
-                                        <option value="douala">Douala</option>
-                                    </select>
+                                    <?php 
+                                        $extra = 'id = "citylist"
+                                            class = "form-control col-xs-3"';
+                                        
+                                        echo form_dropdown('cities', $options, '', $extra);
+                                        
+                                    ?>
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control">
