@@ -12,7 +12,7 @@
         <link href="<?php echo base_url(); ?>cjfksoft/css/bootstrap.css" rel="stylesheet">
         <!-- Include custom design -->
         <link href="<?php echo base_url(); ?>cjfksoft/css/ksoft.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+        <!--<link href='http://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>-->
         
         <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo base_url(); ?>cjfksoft/images/favicon.png">
@@ -43,4 +43,4 @@
     </div>
     
     <div class="container">
-        <div class="content col-xs-12">
+        <div class="content">

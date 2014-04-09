@@ -18,5 +18,13 @@ class Towns_model extends CI_Model{
         }
         return $result;
     }
+    
+    function getTownById($id) {
+        $query = $this->db->get_where('towns', array("id" => $id));
+        if($query->num_rows()) 
+            foreach ($query->result() as $r){
+                return $r->name;
+            }
+    }
 }
 ?>

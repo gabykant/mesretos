@@ -16,5 +16,15 @@ class Cities_model extends CI_Model{
         }
         return $result;
     }
+    
+    function getCityById($id) {
+        $query = $this->db->get_where('cities', array("id" => $id));
+        if($query->num_rows()) {
+            foreach ($query->result() as $r){
+                return $r->name;
+            }
+        }
+        return NULL;
+    }
 }
 ?>
