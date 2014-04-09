@@ -1,4 +1,30 @@
 <?php include 'cjfksoft/include/header.php'; ?>
+<script>
+    $.mousedown(function(){
+        alert();
+    });
+</script>
+<style>
+    tr {
+        padding-top: 30px;
+        height: 60px;
+    }
+    .glyphicon-plus {
+        color: #fff;
+        background: yellowgreen;
+        padding: 5px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    tbody {
+        cursor: pointer;
+    }
+    #book {
+        min-height: 100px;
+        background: #FCFCFD;
+    }
+    .box-commande { padding-left: 1px; padding-right: 1px; padding-top: 1px;}
+</style>
 <div class="col-xs-12 box">
     <div class="col-xs-8">
         <div> 
@@ -8,35 +34,30 @@
             if(count($menus) == 0) {
                 echo '<i>Aucun menu n\est disponible pour ce restaurant</i><br />';
             }else {
-                echo '<div class="col-xs-12 text-right box-down">
-                    <a href="" class="btn btn-primary">Ajout menu</a>
-                    <a href="" class="btn btn-primary">Commander</a></div>';
-                
-                foreach ($menus as $m) {
-                    echo '<div class="alert alert-success box-resto col-xs-12">';
-                        echo '<div class="col-xs-3">';
-                            echo '<img src="'.base_url().'upload/"'.$m['picture'].'" class="img-responsive img-thumbnail img-rounded" />';
-                        echo '</div>';
-                        echo '<div class="col-xs-5">';
-                            $details = explode(";", $m['details']);
-                            echo '<ul>';
-                                for ($i=0; $i<count($details); $i++) {
-                                    if ($details[$i] != NULL)
-                                        echo '<li>'.$details[$i].'</li>';
-                                }
-                            echo '</ul>';
-                        echo '</div>';
-                        echo '<div class="col-xs-4">';
-                            echo '<h4>'.$m['prize'].' Frs CFA<code>TTC</code></h4>';
-                            echo '<a href="'.  base_url().'welcome/menuresto/'.$m['id'].'" class="btn btn-warning">Ajouter a la commande</a>';
-                        echo '</div>';
-                    echo '</div>';
-                } 
-                echo '<div class="col-xs-12 text-right box-down">
-                    <a href="" class="btn btn-primary">Ajout menu</a>
-                    <a href="" class="btn btn-primary">Commander</a></div>';
+                echo '<div class="col-xs-12 box-resto">';
+                    echo '<table class="table table-hover table-condensed">';
+                        echo '<thead><tr><th class="col-xs-8"><h4>Repas</h4></th><th class="col-xs-4"></th></thead>';
+                        foreach ($menus as $m) {
+                            echo '<div id="'.$m['id'].'">';
+                            echo '<tbody><tr>
+                                <td class="col-xs-8">'.$m['details'].'</td>';
+                                echo '<td class="col-xs-4">';
+                                    echo $m['prize'].' Frs CFA<code>TTC</code> &nbsp; &nbsp; &nbsp;<i class="glyphicon glyphicon-plus"></i></h4>';
+                                echo '</td>';
+                            echo '</tr></tbody></div>';
+                        } 
+                    echo '</table>';
+                echo '</div>';
             }
         ?>
+    </div>
+    
+    <div class="col-xs-4 box-commande">
+        <div class="page-header top-title_menu">Votre plan de commande</div>
+        <div id="book">
+            l;dfl;
+        </div>
+        <div class='text-footer text-right'>Total</div>
     </div>
 </div>
 

@@ -144,14 +144,25 @@ body {
 }
 
 .box-resto {
-    min-height: 120px;
+    /*min-height: 120px;*/
+    position: absolute;
+    padding-bottom: 10px;
+    width: 90%;
     margin-top: 20px;
-    padding: 20px;
-    padding-right: 0px;
     border-radius: 4px;
-    border: 1px solid #990000;
     margin-bottom: 10px;
     
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    
+    -moz-box-shadow: 0px 0px 1px 0px #656565;
+    -webkit-box-shadow: 0px 0px 1px 0px #656565;
+    -o-box-shadow: 0px 0px 1px 0px #656565;
+    box-shadow: 0px 0px 1px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=1);
+}
+
+.box-commande{
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     
@@ -169,3 +180,19 @@ body {
 .box-down {
     margin-top: 50px;
 }
+
+.top-title_menu {
+        border-bottom: 1px solid #ddd;
+        background: #333;
+        padding-left: 5px;
+        padding-top: 5px;
+        color: #ccc;
+        -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    
+    -moz-box-shadow: 0px 0px 1px 0px #656565;
+    -webkit-box-shadow: 0px 0px 1px 0px #656565;
+    -o-box-shadow: 0px 0px 1px 0px #656565;
+    box-shadow: 0px 0px 1px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=1);
+    }

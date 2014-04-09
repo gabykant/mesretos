@@ -35,7 +35,8 @@
                             ?>
                         </div>
                         <div class='form-group'>
-                            <input type='submit' class='form-control btn btn-warning' value='Commandez'>
+                            <button class='form-control btn btn-warning'>Commandez <i class="glyphicon glyphicon-chevron-right"></i></button>
+                            
                         </div>
                     </form>
             </div>
